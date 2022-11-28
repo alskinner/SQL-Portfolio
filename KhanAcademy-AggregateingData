@@ -1,0 +1,26 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, aisle INTEGER, quantity INTEGER);
+
+INSERT INTO store VALUES (1, "pacifier", 2.00, 1, 10);
+INSERT INTO store VALUES (2, "car seat", 200.00, 5, 3);
+INSERT INTO store VALUES (3, "sleep sack", 20.00, 3, 5);
+INSERT INTO store VALUES (4, "stroller", 150.00, 5, 2);
+INSERT INTO store VALUES (5, "bib", 3.00, 1, 6);
+INSERT INTO store VALUES (6, "diaper", 40.00, 2, 20);
+INSERT INTO store VALUES (7, "crib", 130.00, 4, 4);
+INSERT INTO store VALUES (8, "wipes", 15.00, 2, 25);
+INSERT INTO store VALUES (9, "sound machine", 50.00, 3, 5);
+INSERT INTO store VALUES (10, "changing table", 70.00, 4, 3);
+INSERT INTO store VALUES (11, "swing", 100.00, 4, 2);
+INSERT INTO store VALUES (12, "bottle", 6.00, 1, 8);
+INSERT INTO store VALUES (13, "blanket", 12.00, 3, 6);
+INSERT INTO store VALUES (14, "baby carrier", 65.00, 5, 4);
+INSERT INTO store VALUES (15, "playpen", 130.00, 4, 3);
+SELECT * FROM store;
+
+SELECT * 
+FROM store 
+ORDER BY price;
+
+SELECT aisle, SUM(quantity) 
+FROM store 
+GROUP BY aisle;
